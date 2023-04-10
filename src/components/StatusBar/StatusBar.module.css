@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4.5px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.left_block {
+  display: flex;
+  justify-content: center;
+}
+
+.left_block img {
+    margin-right: 3px;
+}
+
+.operator {
+    width: 35px;
+    height: 15px;
+    margin-right: 8.46px;
+}
+
+.right_block {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 88px;
+  height: 18px;
+}
+
+.center_block {
+  display: flex;
+  justify-content: center;
+}
+
+.bluetooth {
+  margin-right: 5px;
+}
+
+.text {
+    font-family: 'Helvetica';
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+}
+
+.battery .text {
+  margin-right: 5px;
+  text-align: center;
+}
