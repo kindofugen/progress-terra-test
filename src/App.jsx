@@ -8,12 +8,14 @@ import FailBlock from './components/FailBlock/FailBlock';
 
 function App() {
   const [onError, setOnError] = useState('');
+  const [isToken, setIsToken] = useState(false);
 
   useEffect(() => {
     (async () => {
       try {
         const token = await getAccessToken();
         sessionStorage.setItem('accessToken', token);
+        setIsToken(true);
       } catch (error) {
         setOnError(error.message);
       }
@@ -28,7 +30,7 @@ function App() {
         <FailBlock onError={onError} />
       ) : (
         <>
-          <InfoBlock />
+          <InfoBlock isToken={isToken} />
         </>
       )}
     </>

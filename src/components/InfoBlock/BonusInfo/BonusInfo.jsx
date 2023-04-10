@@ -14,7 +14,7 @@ const BonusInfo = ({ isLoading, data, onError }) => {
             <img src={loader} alt='loading...' />
           </div>
         )}
-        {onError && (
+        {Boolean(onError) && !data && (
           <div className={styles.error_message}>
             <span>{onError}</span>
           </div>

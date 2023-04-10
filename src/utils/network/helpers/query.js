@@ -20,7 +20,6 @@ export const getAccessToken = async () => {
 export const getBonusInfo = async (token) => {
   const { data } = await infoInstance.get(`/api/v3/ibonus/generalInfo/${token}`);
   if (data.resultOperation.status === 0) {
-    console.log(data.data);
     return data.data;
   } else {
     throw new Error('Не удалось загрузить бонусы');
